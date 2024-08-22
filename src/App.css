@@ -1,0 +1,241 @@
+body{
+  font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	overflow: auto;
+
+}
+.active-link{
+  color: #24a7ee;
+
+}
+.header{
+background-color: antiquewhite;
+
+}
+
+ul {
+	list-style: none;
+}
+
+nav .nav-items {
+display: flex;
+justify-content: space-between;
+height: 100%;
+align-items: center;
+}
+.container{
+  padding: 0 20px;
+	margin: 0 auto;
+	max-width: 1200px;
+
+
+}
+nav .nav-items {
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+	align-items: center;
+}
+
+.nav-items ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav-items ul li {
+	list-style: none;
+	margin-left: 20px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #000;
+}
+
+.nav-items ul li a {
+	color: #000;
+  text-decoration: none;
+}
+
+.nav-items ul li a:hover {
+	color: #00a8ff;
+}
+
+.nav-items ul li a.active {
+	color: #00a8ff;
+}
+
+li{
+  list-style-type:none;
+}
+
+.border{
+  
+  display: flex;
+            justify-content: center; /* Yatayda ortalama */
+            align-items: center; /* Dikeyde ortalama */
+}
+
+.text
+{
+  background-color: #fff;
+  border: 2px solid black; /* Kenarlık rengi ve kalınlığı */
+            padding: 20px; /* İç kenar boşluğu */
+            text-align: center; /* Metni ortalama */
+          }
+.title2{
+  text-align: center; /* Başlığı ortalar */
+  font-size: 24px; /* Başlık boyutu */
+  font-weight: bold; /* Kalın yazı stili */
+  color: red;
+}
+.image {
+  width:100%; /* Resmin genişliği */
+  height: 300px; /* Yüksekliği orantılı olarak ayarlar */
+  margin-bottom: 20px; /* Resim ile başlık arasında boşluk bırakır */
+}
+.form-container {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #00a8ff;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px; /* Add some margin between the form and the result */
+}
+
+
+label{
+padding-left: 20px;
+color: #fff;
+}
+
+input
+{
+margin-left: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    padding: 10px;
+    font-family: 'Sniglet', cursive;
+    font-size: 1em;
+    transition: border 0.5s;
+    -webkit-transition: border 0.5s;
+    -moz-transition: border 0.5s;
+    -o-transition: border 0.5s;
+    border: solid 3px #98d4f3;  
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    
+}
+
+.btn {
+  margin-left: 20px;
+  display: inline-block; /* Ağırlık ve hizalamayı düzeltir */
+  border-radius: 20px;
+  padding: 10px 20px; /* Düğme içeriği daha geniş yapar */
+  font-family: 'Sniglet', cursive;
+  font-size: 1em;
+  color: #676767;
+  text-align: center; /* Metni ortalar */
+  border: solid 3px #98d4f3;
+  background-color: #ffffff; /* Arka plan rengini belirle */
+  text-decoration: none; /* Bağlantı altını çizer */
+}
+.btn:hover {
+  background-color: #18fd36; /* Hover efekti ile arka plan rengini değiştirir */
+  color: #ffffff; /* Hover durumunda metin rengini beyaz yapar */
+  border-color: #15f379; /* Hover durumunda kenar rengini değiştirir */
+}
+.btn a {
+  color: inherit; /* Link rengini butonla aynı yapar */
+  text-decoration: none; /* Link altını çizer */
+  display: inline; /* Linki düğme olarak görünmesini sağlar */
+}
+.error{
+  color: red;
+}
+.sonuc{
+  display: flex;
+  flex-direction: column;
+}
+span{
+  font-family: 'Sniglet', cursive;
+  color: red;
+font-size: 20px;
+}
+
+.bmi-table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 200vh;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bmi-table th, .bmi-table td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+.bmi-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+.diyet{
+  border-radius: 8px;
+background-color:bisque;
+font-family: 'Sniglet', cursive;
+margin-top: 10px;
+
+}
+.sil{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  float: right;
+  padding: 10px; /* Optional: Add padding inside the element */
+  background-color: red;
+  border-radius: 20px;
+  font-family: 'Sniglet', cursive;
+
+
+}
+.diyetlist {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #9cb1bc;
+  height: 100vh;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif bir gölge efekti */
+}
+
+.diyetlist ul {
+text-align: center;  padding: 0; /* Varsayılan iç boşluğu kaldırır */
+  width: 100%; /* Liste genişliğini kapsayıcı ile aynı yapar */
+}
+
+.diyetlist ul li {
+  
+  width: 100%; /* Her bir li elemanı tam genişlikte olur */
+  text-align: center; /* İçeriği ortalar */
+  margin-bottom: 10px; /* Elemanlar arasındaki boşluk */
+  background-color: #fff; /* Arka plan rengi */
+  padding: 10px; /* İçerik ile kenar arasında boşluk */
+  box-sizing: border-box; /* Padding genişlik hesaplamasına dahil edilir */
+}
+
+.kahvaltı{
+
+  width: 100px;
+}

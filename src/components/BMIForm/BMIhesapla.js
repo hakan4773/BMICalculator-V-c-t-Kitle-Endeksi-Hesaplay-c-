@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from 'react'
-import ReactDOM from 'react-dom';
-import { Formik, Field, Form,useFormik, validateYupSchema } from 'formik';
+import {useFormik} from 'formik';
 import calculatorSchema from './validation';
 import { NavLink } from 'react-router-dom';
 
 function BMIhesapla() {
-  const [bmıEntry,setBMIEntry]=useState([])
+  const [bmiEntry,setBMIEntry]=useState([])
 
   useEffect(()=>{
-  const storedEntries = JSON.parse(localStorage.getItem('bmiEntries'))
+  const storedEntries = JSON.parse(localStorage.getItem('bmiEntries'))|| []
   setBMIEntry(storedEntries)
 },[])
 
 
 //Silme butonu
 const HandleRemove=(id)=>{
-const updateItems=bmıEntry.filter((value,index)=>index!==id)
+const updateItems=bmiEntry.filter((value,index)=>index!==id)
 setBMIEntry(updateItems);
 localStorage.setItem('bmiEntries', JSON.stringify(updateItems));
 }
@@ -32,13 +31,13 @@ const {handleSubmit,handleChange,handleBlur,values,errors,touched}=useFormik({
       const heightValue = parseInt(values.Boy, 10) || 0;
       const heightInMeters = heightValue / 100;
       const bmi = heightValue > 0 ? kilogramValue / (heightInMeters * heightInMeters) : 0;
-//Yeni değerleri alma
+    //Yeni değerleri alma
       const newEntry = {
         kilogram: values.kilogram,
         Boy: values.Boy,
         BMI: bmi.toFixed(2),
       };
-const updatedEntries=[...bmıEntry,newEntry]
+const updatedEntries=[...bmiEntry,newEntry]
   setBMIEntry(updatedEntries)//değerleri kaydetme
   localStorage.setItem('bmiEntries', JSON.stringify(updatedEntries));
 //local storage a ekleme
@@ -92,11 +91,7 @@ onBlur={handleBlur}
 <div className='sonuc'>
 <span>
   <b>
-    
-    {bmıEntry.length > 0 && `BMI: ${bmıEntry[bmıEntry.length - 1].BMI} kg/m² olarak ölçülmüştür.`} 
-  
- 
-    
+    {bmiEntry.length > 0 && `BMI: ${bmiEntry[bmiEntry.length - 1].BMI} kg/m² olarak ölçülmüştür.`} 
     </b>
   </span>
   </div>
@@ -113,7 +108,7 @@ onBlur={handleBlur}
       </tr>
     </thead>
     <tbody>
- {bmıEntry.map((entry,index)=><tr key={index}>
+ {bmiEntry.map((entry,index)=><tr key={index}>
  <td>{entry.kilogram}</td>
  <td>{entry.Boy}</td>
  <td>{entry.BMI}</td>
